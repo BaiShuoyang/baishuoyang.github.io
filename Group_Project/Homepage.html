@@ -11,10 +11,10 @@
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-.fa-anchor,.fa-coffee {font-size:200px}
+.fa-tachometer, .fa-cogs, .fa-bar-chart {font-size:200px}
 </style>
 </head>
-<body>
+<body style="background-color:black;">
 
 <!-- Navbar -->
 <div class="w3-top">
@@ -28,36 +28,79 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </div>
 </div>
 
+
+
 <!-- Header -->
-<header class="w3-container w3-black w3-center" style="padding:128px 16px">
+<!-- <header class="w3-container w3-black w3-center" style="padding:128px 16px">
   <h2 class="w3-margin w3-jumbo w3-padding-large w3-animate-fading">Not sure what movie to watch next?</h2>
   <h2 class="w3-margin w3-jumbo w3-padding-large w3-animate-fading">Find some inspirations here.</h2>
   <p class="w3-xlarge w3-margin w3-padding-large w3-animate-fading">This portal provides you with movie recommendations that match your interests, fun facts about your favourite movie genres, and many more!</p>
   <button class="w3-button w3-deep-orange w3-padding-large w3-large w3-margin-top" onclick="window.location.href='https://baishuoyang.github.io/Group_Project/Select_Genre.html';">Get Started</button>
-</header>
+</header> -->
+
+<!-- Header -->
+<div class="w3-container">
+<div class="w3-half w3-left w3-black" style="padding:128px 0px 16px 16px; min-height: 800px;">
+  <header class="w3-container">
+    <div class="w3-container">
+    <h5 class="w3-margin w3-xlarge w3-padding-top-24 w3-animate-fading">Not sure what movie to watch next?</h5>
+    <h5 class="w3-margin w3-xlarge w3-padding-top-24 w3-animate-fading">Find some inspirations here.</h5>
+    <p class="w3-xlarge w3-margin w3-padding-top-24 w3-animate-fading">This portal provides you with movie recommendations that match your interests, fun facts about your favourite movie genres, and many more!</p>
+    <br><br><br><br><br>
+    <button class="w3-button w3-deep-orange w3-padding-large w3-large w3-margin-left" onclick="window.location.href='https://baishuoyang.github.io/Group_Project/Select_Genre.html';">Get Started</button>
+  </div>
+  </header>
+</div>
+<div class="w3-half w3-right w3-black" style="padding:128px 0px 16px 16px; min-height: 800px;">
+  <div class="w3-content w3-section">
+    <img class="mySlides w3-animate-left" src="./Poster_Image/wallpaper1.jpg" style="width:100%">
+    <img class="mySlides w3-animate-left" src="./Poster_Image/wallpaper2.jpg" style="width:100%">
+    <img class="mySlides w3-animate-left" src="./Poster_Image/wallpaper3.jpg" style="width:100%">
+    <img class="mySlides w3-animate-left" src="./Poster_Image/wallpaper4.jpg" style="width:100%">
+    <img class="mySlides w3-animate-left" src="./Poster_Image/wallpaper5.jpg" style="width:100%">
+  </div>
+</div>
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2500);    
+}
+</script>
+
 
 <!-- First Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
+<div class="w3-row-padding w3-white w3-padding-32 w3-container">
   <div class="w3-content">
     <div class="w3-twothird w3-padding-32">
       <h2>Discover By Your Favourite Movie Genre</h2>
       <h5 class="w3-padding-32">This portal gives you interactive and intuitive experience dicovering new movies that are in your favourite movie genres, such as Drama, Animation, Action & Adventure, etc.</h5>
       <h5>You can select your favourite genre and check out the top movies, directors, actors and actresses, and what top critics are commenting about them!</h5>
       <br>
-      <a href="https://baishuoyang.github.io/Group_Project/Select_Genre.html" class="w3-button w3-left w3-black">Discover By Genre &raquo;</a>
+      <a href="https://baishuoyang.github.io/Group_Project/Select_Genre.html" class="w3-button w3-left w3-black w3-xlarge">Discover By Genre &raquo;</a>
     </div>
-
     <div class="w3-third w3-center w3-padding-32">
-      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
+      <i class="fa fa-tachometer w3-padding-64 w3-text-red"></i>
     </div>
   </div>
 </div>
 
 <!-- Second Grid -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+<div class="w3-row-padding w3-light-grey w3-padding-32 w3-container">
   <div class="w3-content">
-    <div class="w3-third w3-center">
-      <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
+    <div class="w3-third w3-center w3-padding-32">
+      <i class="fa fa-cogs w3-padding-64 w3-text-red w3-margin-right"></i>
     </div>
 
     <div class="w3-twothird">
@@ -65,24 +108,24 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       <h5 class="w3-padding-32">If you recently watched a movie that is still in your fond memory, you can find other similar movies from our recommendation engine.</h5>
       <h5>You can search by Movie Tile, Director or Genre, and click on the bar chart next to the Movie Title to check out the recommended movies that are similar!</h5>
       <br>
-      <a href="https://baishuoyang.github.io/Group_Project/Select_Genre.html" class="w3-button w3-left w3-black">Movie Recommendation &raquo;</a>
+      <a href="https://baishuoyang.github.io/Group_Project/Select_Genre.html" class="w3-button w3-left w3-black w3-xlarge">Movie Recommendation &raquo;</a>
     </div>
   </div>
 </div>
 
 <!-- Third Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
+<div class="w3-row-padding w3-white w3-padding-32 w3-container">
   <div class="w3-content">
     <div class="w3-twothird w3-padding-32">
       <h2>Gain Insights About the Movie Industry</h2>
       <h5 class="w3-padding-32">Are you a student or researcher focusing on the filmmaking industry? This portal also presents to you insights, trends and fun facts on the industry.</h5>
       <h5>You can navigate between pages under the Movie Insights section to identify the industry trends in terms of production companies, regions, etc.</h5>
       <br>
-      <a href="https://baishuoyang.github.io/Group_Project/Select_Genre.html" class="w3-button w3-left w3-black">Movie Insights &raquo;</a>
+      <a href="https://baishuoyang.github.io/Group_Project/Select_Genre.html" class="w3-button w3-left w3-black w3-xlarge">Movie Insights &raquo;</a>
     </div>
 
     <div class="w3-third w3-center w3-padding-32">
-      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
+      <i class="fa fa-bar-chart w3-padding-64 w3-text-red"></i>
     </div>
   </div>
 </div>
@@ -92,7 +135,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </div> -->
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+<footer class="w3-container w3-padding-32 w3-center w3-opacity">  
   <div class="w3-xlarge w3-padding-32">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
